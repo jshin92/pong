@@ -12,6 +12,7 @@
 #include <iostream>
 #define WIDTH 800
 #define HEIGHT 600
+#define BALL_SIZE 50
 #define START_X_VELO 5
 #define START_Y_VELO 2
 int main()
@@ -33,7 +34,7 @@ int main()
 				App.Close();
 
 		App.Clear();
-		App.Draw(sf::Shape::Circle(x, y, 50, sf::Color::Yellow, 10, 
+		App.Draw(sf::Shape::Circle(x, y, BALL_SIZE, sf::Color::Yellow, 10, 
 						 sf::Color::Blue));
 		App.Display();
 		x += xVel;
@@ -50,6 +51,7 @@ int main()
 
  /*  Draw:
   * draw ball in middle [X]
+	* handle collision with walls [X]
 	* TODO:
 	* draw left paddle    []
 	* draw right paddle   []
